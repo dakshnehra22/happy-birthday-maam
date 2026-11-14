@@ -4,82 +4,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Cutie pie 🎀</title>
+<title>Happy Birthday Cutie 🎀</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box}
 body{
- background:linear-gradient(135deg,#170d27,#32152f,#180e2c);
+ background:linear-gradient(135deg,#10091d,#32152f,#160d29);
  color:white;font-family:Poppins,sans-serif;
  min-height:100vh;overflow-x:hidden;
 }
 nav{
+ position:sticky;top:0;z-index:10;
  display:flex;justify-content:center;flex-wrap:wrap;
- gap:9px;padding:18px 8px;
- background:#160d20dd;position:sticky;top:0;z-index:10;
- backdrop-filter:blur(12px);
+ gap:7px;padding:15px 5px;
+ background:#160d20ed;backdrop-filter:blur(12px);
 }
 nav button{
- background:transparent;border:1px solid #ffffff35;
- color:white;padding:9px 14px;border-radius:25px;
- cursor:pointer;font-size:12px;
+ background:transparent;color:white;
+ border:1px solid #ffffff35;border-radius:25px;
+ padding:9px 13px;cursor:pointer;
 }
-nav button:hover{background:#fa80b5;color:#240e28}
+nav button:hover{background:#ff91bd;color:#28132b}
 .page{
- display:none;min-height:85vh;padding:65px 20px;
- max-width:900px;margin:auto;text-align:center;
- animation:fade .5s;
+ display:none;min-height:85vh;
+ max-width:950px;margin:auto;padding:65px 20px;
+ text-align:center;animation:fade .5s;
 }
 .page.active{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
 h1,h2{font-family:'Playfair Display',serif}
 h1{font-size:clamp(43px,9vw,75px);margin:25px 0}
-h2{font-size:clamp(32px,6vw,48px);margin-bottom:22px;color:#ffb4d2}
+h2{font-size:clamp(30px,6vw,46px);color:#ffb4d2;margin-bottom:20px}
+h3{color:#ffb4d2;margin:12px}
 p{line-height:1.9;color:#f3dce9}
-.tag{color:#ffacd0;letter-spacing:3px;font-size:12px}
 .gradient{
  background:linear-gradient(90deg,#ff9ac7,#e3b4ff);
  -webkit-background-clip:text;color:transparent;
 }
+.tag{color:#ffacd0;letter-spacing:3px;font-size:12px}
 .btn{
- padding:13px 25px;border:0;border-radius:30px;
+ padding:13px 24px;border:0;border-radius:30px;
  background:linear-gradient(90deg,#ff91bd,#c89bff);
- color:#29132c;font-weight:bold;cursor:pointer;
+ color:#29132b;font-weight:bold;cursor:pointer;
  margin:12px 5px;transition:.3s;
 }
-.btn:hover{transform:scale(1.06)}
-.box{
+.btn:hover{transform:scale(1.05)}
+.box,.card{
  background:#ffffff0c;border:1px solid #ffffff25;
  border-radius:22px;padding:25px;margin:18px auto;
- max-width:650px;box-shadow:0 10px 35px #0003;
 }
+.box{max-width:680px}
 .grid{
  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
- gap:16px;margin-top:30px;
+ gap:15px;margin-top:30px;
 }
-.card{
- padding:24px;background:#ffffff0c;
- border:1px solid #ffffff25;border-radius:20px;
-}
+.card{margin:0}
 .card span{font-size:35px}
-.card h3{margin:12px;color:#ffb4d2}
 .shayari{
  font-family:'Playfair Display',serif;
- font-size:21px;line-height:2;color:#ffe1ed;
+ font-size:20px;line-height:2;color:#ffe1ed;
 }
 .big{font-size:85px;margin:25px}
 footer{text-align:center;padding:25px;color:#c6a9c7}
 .heart{
- position:fixed;bottom:-30px;pointer-events:none;
- animation:up 5s linear forwards;z-index:20;
+ position:fixed;bottom:-30px;
+ pointer-events:none;animation:up 5s linear forwards;z-index:20;
 }
 @keyframes up{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
-input{
- background:#ffffff12;border:1px solid #ffffff35;
- color:white;padding:12px;border-radius:12px;width:85%;
- margin:10px;
+
+.countdown{
+ max-width:650px;margin:35px auto 20px;padding:25px 12px;
+ border:1px solid #ff9fc455;border-radius:25px;
+ background:linear-gradient(135deg,#ffffff12,#ff80b510);
+}
+.timer{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}
+.unit{
+ min-width:72px;padding:14px 8px;
+ border-radius:15px;background:#ffffff12;
+ border:1px solid #ffffff25;
+}
+.unit strong{display:block;font-size:29px;color:#ffacd0}
+.unit small{font-size:11px;color:#e6c8dc}
+.locked{
+ max-width:650px;margin:20px auto;padding:28px 15px;
+ border-radius:24px;border:1px solid #c69aff66;
+ background:linear-gradient(135deg,#332044,#21152f);
+}
+.lock-icon{font-size:55px}
+#unlockMessage{display:none;margin-top:20px}
+@media(max-width:500px){
+ nav button{font-size:11px;padding:8px 10px}
+ .unit{min-width:65px}
 }
 </style>
 </head>
@@ -95,53 +112,71 @@ input{
 <button onclick="showPage('surprise')">🎁 Surprise</button>
 </nav>
 
-<!-- PAGE 1 -->
+<!-- PAGE 1 HOME -->
 <section id="home" class="page active">
-<div class="tag">✨ A SPECIAL DAY · 16 NOVEMBER ✨</div>
+<div class="tag">✨ 16 NOVEMBER · A SPECIAL DAY ✨</div>
 <div class="big">🎀</div>
 <h1>Happy Birthday<br><span class="gradient">Cutie!</span></h1>
-<p>
-Today is not just another day.<br>
-It's the birthday of someone who deserves
-all the happiness in the world.
-</p>
-<button class="btn" onclick="showPage('wishes')">
-Start Your Surprise 💗
+<p>A little website, a little magic and lots of wishes.<br>
+Made specially to bring a smile to your face. 💗</p>
+
+<button class="btn" onclick="showPage('wishes')">Start Your Surprise 💕</button>
+
+<div class="countdown">
+<div class="tag">⏳ THE BIG DAY IS COMING</div>
+<h2 style="margin-top:15px">Countdown Begins!</h2>
+<p>Something special is waiting for you...</p>
+
+<div class="timer">
+<div class="unit"><strong id="days">00</strong><small>Days</small></div>
+<div class="unit"><strong id="hours">00</strong><small>Hours</small></div>
+<div class="unit"><strong id="minutes">00</strong><small>Minutes</small></div>
+<div class="unit"><strong id="seconds">00</strong><small>Seconds</small></div>
+</div>
+<p>📅 16 November · 12:00 AM</p>
+</div>
+
+<!-- LOCKED SURPRISE -->
+<div class="locked">
+<div class="lock-icon" id="lockIcon">🔒</div>
+<h3 id="lockTitle">A Secret Surprise Awaits...</h3>
+<p id="lockText">Too curious? 😉 Your little secret is locked until your birthday!</p>
+
+<button class="btn" id="unlockButton" disabled style="opacity:.5">
+🔐 LOCKED UNTIL MIDNIGHT
 </button>
+
+<div id="unlockMessage">
+<h2>YOU UNLOCKED IT! 💖</h2>
+<p>Happy Birthday, Cutie! 🎀</p>
+<p>Your special surprise is finally here.<br>
+May your life always be full of happiness!</p>
+<div class="big">🎁💗✨</div>
+</div>
+</div>
 </section>
 
-<!-- PAGE 2 -->
+<!-- PAGE 2 WISHES -->
 <section id="wishes" class="page">
 <div class="tag">CHAPTER 02 · SPECIAL WISHES</div>
-<h2>Dear 🌷</h2>
+<h2>Dear Cutie 🌷</h2>
 <p>Some little wishes for your beautiful new year.</p>
 
 <div class="grid">
-<div class="card"><span>🌸</span><h3>Happiness</h3>
-<p>May your smile never fade and your heart always stay happy.</p></div>
-
-<div class="card"><span>✨</span><h3>Dreams</h3>
-<p>May every dream you have find its way towards reality.</p></div>
-
-<div class="card"><span>🦋</span><h3>Confidence</h3>
-<p>Always believe in yourself. You are capable of amazing things.</p></div>
-
-<div class="card"><span>💗</span><h3>Love & Care</h3>
-<p>May you always have people around who genuinely care for you.</p></div>
-
-<div class="card"><span>🌈</span><h3>New Memories</h3>
-<p>May this year give you countless reasons to laugh.</p></div>
-
-<div class="card"><span>🎂</span><h3>Birthday Magic</h3>
-<p>May today be filled with cake, gifts and beautiful surprises.</p></div>
+<div class="card"><span>🌸</span><h3>Happiness</h3><p>May your smile never fade and your heart always stay happy.</p></div>
+<div class="card"><span>✨</span><h3>Dreams</h3><p>May every dream you have find its way towards reality.</p></div>
+<div class="card"><span>🦋</span><h3>Confidence</h3><p>Always believe in yourself. You are capable of amazing things.</p></div>
+<div class="card"><span>💗</span><h3>Love & Care</h3><p>May you always have people around who genuinely care for you.</p></div>
+<div class="card"><span>🌈</span><h3>Memories</h3><p>May this year give you countless reasons to laugh.</p></div>
+<div class="card"><span>🎂</span><h3>Birthday Magic</h3><p>May today be filled with cake, gifts and beautiful surprises.</p></div>
 </div>
 <button class="btn" onclick="showPage('shayari')">Next Surprise →</button>
 </section>
 
-<!-- PAGE 3 -->
+<!-- PAGE 3 SHAYARI -->
 <section id="shayari" class="page">
-<div class="tag">CHAPTER 03 · WORDS FROM THE HEART</div>
-<h2>Thodi si Shayari 💌</h2>
+<div class="tag">CHAPTER 03 · SOME BEAUTIFUL WORDS</div>
+<h2>Thodi Si Shayari 💌</h2>
 
 <div class="box">
 <p class="shayari">
@@ -173,7 +208,7 @@ Aur har din tere liye ek naya tyohar ho.
 <button class="btn" onclick="showPage('fun')">Let's Play 🎮</button>
 </section>
 
-<!-- PAGE 4 -->
+<!-- PAGE 4 FUN -->
 <section id="fun" class="page">
 <div class="tag">CHAPTER 04 · FUN TIME</div>
 <h2>Birthday Fun Zone 🎮</h2>
@@ -182,7 +217,7 @@ Aur har din tere liye ek naya tyohar ho.
 <div class="grid">
 <div class="card">
 <span>🍀</span><h3>Lucky Message</h3>
-<button class="btn" onclick="randomMessage()">Click Me</button>
+<button class="btn" onclick="randomMessage()">Reveal</button>
 <p id="luck"></p>
 </div>
 
@@ -198,81 +233,49 @@ Aur har din tere liye ek naya tyohar ho.
 <p id="mission"></p>
 </div>
 </div>
-
 <button class="btn" onclick="showPage('letter')">Next →</button>
 </section>
 
-<!-- PAGE 5 -->
+<!-- PAGE 5 LETTER -->
 <section id="letter" class="page">
 <div class="tag">CHAPTER 05 · A LITTLE LETTER</div>
-<h2>Dear Nishu, 💗</h2>
+<h2>Dear Cutie, 💗</h2>
 
 <div class="box" style="text-align:left">
-<p>Hey Nishu!</p>
-<br>
-<p>
-First of all, a very very Happy Birthday to you!
-I hope your day is full of laughter, happiness,
-your favourite people and lots of cake.
-</p>
-<br>
-<p>
-I made this little website because I wanted
-your birthday to feel a little more special.
-It may be a small surprise, but I hope it
-brings a big smile to your face.
-</p>
-<br>
-<p>
-You deserve all the good things in life.
-Keep smiling, keep growing and never stop
-being your wonderful self.
-</p>
-<br>
-<p>
-And honestly, I'm glad I got to know you.
-I hope we make many more beautiful memories.
-</p>
-<br>
-<p style="color:#ffacd0;font-size:20px">
-Stay happy, stay amazing! 💕
-</p>
+<p>Hey Cutie!</p><br>
+<p>First of all, a very very Happy Birthday to you! I hope your day is full of laughter, happiness, your favourite people and lots of cake.</p><br>
+<p>I made this little website because I wanted your birthday to feel a little more special. It may be a small surprise, but I hope it brings a big smile to your face.</p><br>
+<p>You deserve all the good things in life. Keep smiling, keep growing and never stop being your wonderful self.</p><br>
+<p>And honestly, I'm glad I got to know you. I hope we make many more beautiful memories.</p><br>
+<p style="color:#ffacd0;font-size:20px">Stay happy, stay amazing! 💕</p>
 <p>— Your friend ❤️</p>
 </div>
 
-<button class="btn" onclick="showPage('surprise')">
-Last Surprise 🎁
-</button>
+<button class="btn" onclick="showPage('surprise')">Last Surprise 🎁</button>
 </section>
 
-<!-- PAGE 6 -->
+<!-- PAGE 6 SURPRISE -->
 <section id="surprise" class="page">
 <div class="tag">CHAPTER 06 · THE FINAL SURPRISE</div>
 <h2>Something Special For You!</h2>
 <div class="big">🎁</div>
-<p>Ready to open your birthday gift?</p>
+<p>Ready for a little extra birthday magic?</p>
 
 <button class="btn" onclick="openGift()">OPEN YOUR GIFT 💗</button>
 
 <div class="box" id="gift" style="display:none">
-<h2>Surprise Nishu! 🎀</h2>
-<p>
-You are special in your own way.<br>
-May your life always be full of smiles,
-beautiful memories and endless happiness.
-</p>
-<br>
+<h2>Surprise! 🎀</h2>
+<p>You are special in your own way.</p>
+<p>May your life always be full of smiles,
+beautiful memories and endless happiness.</p>
 <h2 class="gradient">Happy Birthday Cutie! 💖</h2>
-<p>And remember... keep that beautiful smile!</p>
 </div>
 
 <button class="btn" onclick="hearts()">More Hearts 💕</button>
 <button class="btn" onclick="showPage('home')">Replay Website ↻</button>
 </section>
 
-<footer>
-Made with ❤️ for Nishu · 16 November
-</footer>
+<footer>Made with ❤️ for Cutie · 16 November</footer>
 
 <script>
 function showPage(id){
@@ -288,8 +291,7 @@ function randomMessage(){
  "May all your wishes come true! ✨",
  "Today, cake has zero calories! 🎂"
  ];
- document.getElementById('luck').innerText=
- m[Math.floor(Math.random()*m.length)];
+ document.getElementById('luck').innerText=m[Math.floor(Math.random()*m.length)];
 }
 
 function power(){
@@ -298,8 +300,7 @@ function power(){
  "Spreading happiness everywhere! 💕",
  "Being wonderfully YOU! 🦋"
  ];
- document.getElementById('power').innerText=
- p[Math.floor(Math.random()*p.length)];
+ document.getElementById('power').innerText=p[Math.floor(Math.random()*p.length)];
 }
 
 function mission(){
@@ -309,8 +310,7 @@ function mission(){
  "Make one big birthday wish! 🌟",
  "Smile as much as you can today! 💗"
  ];
- document.getElementById('mission').innerText=
- m[Math.floor(Math.random()*m.length)];
+ document.getElementById('mission').innerText=m[Math.floor(Math.random()*m.length)];
 }
 
 function openGift(){
@@ -331,6 +331,49 @@ function hearts(){
   setTimeout(()=>h.remove(),6500);
  }
 }
+
+// COUNTDOWN: INDIA TIME
+const birthdayDate = new Date("2026-11-16T00:00:00+05:30").getTime();
+
+function updateCountdown(){
+ const difference=birthdayDate-Date.now();
+
+ if(difference<=0){
+  ["days","hours","minutes","seconds"].forEach(id=>{
+   document.getElementById(id).textContent="00";
+  });
+
+  document.getElementById("lockIcon").textContent="🔓";
+  document.getElementById("lockTitle").textContent="Your Surprise Is Unlocked!";
+  document.getElementById("lockText").textContent="The wait is finally over, Cutie! 💗";
+
+  const button=document.getElementById("unlockButton");
+  button.disabled=false;
+  button.style.opacity="1";
+  button.textContent="🎁 OPEN YOUR SECRET";
+
+  button.onclick=function(){
+   document.getElementById("unlockMessage").style.display="block";
+   hearts();
+  };
+  return;
+ }
+
+ document.getElementById("days").textContent=
+ Math.floor(difference/86400000).toString().padStart(2,"0");
+
+ document.getElementById("hours").textContent=
+ Math.floor((difference%86400000)/3600000).toString().padStart(2,"0");
+
+ document.getElementById("minutes").textContent=
+ Math.floor((difference%3600000)/60000).toString().padStart(2,"0");
+
+ document.getElementById("seconds").textContent=
+ Math.floor((difference%60000)/1000).toString().padStart(2,"0");
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
 </script>
 
 </body>

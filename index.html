@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Cutie pie 🎀</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+ background:linear-gradient(135deg,#170d27,#32152f,#180e2c);
+ color:white;font-family:Poppins,sans-serif;
+ min-height:100vh;overflow-x:hidden;
+}
+nav{
+ display:flex;justify-content:center;flex-wrap:wrap;
+ gap:9px;padding:18px 8px;
+ background:#160d20dd;position:sticky;top:0;z-index:10;
+ backdrop-filter:blur(12px);
+}
+nav button{
+ background:transparent;border:1px solid #ffffff35;
+ color:white;padding:9px 14px;border-radius:25px;
+ cursor:pointer;font-size:12px;
+}
+nav button:hover{background:#fa80b5;color:#240e28}
+.page{
+ display:none;min-height:85vh;padding:65px 20px;
+ max-width:900px;margin:auto;text-align:center;
+ animation:fade .5s;
+}
+.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+h1,h2{font-family:'Playfair Display',serif}
+h1{font-size:clamp(43px,9vw,75px);margin:25px 0}
+h2{font-size:clamp(32px,6vw,48px);margin-bottom:22px;color:#ffb4d2}
+p{line-height:1.9;color:#f3dce9}
+.tag{color:#ffacd0;letter-spacing:3px;font-size:12px}
+.gradient{
+ background:linear-gradient(90deg,#ff9ac7,#e3b4ff);
+ -webkit-background-clip:text;color:transparent;
+}
+.btn{
+ padding:13px 25px;border:0;border-radius:30px;
+ background:linear-gradient(90deg,#ff91bd,#c89bff);
+ color:#29132c;font-weight:bold;cursor:pointer;
+ margin:12px 5px;transition:.3s;
+}
+.btn:hover{transform:scale(1.06)}
+.box{
+ background:#ffffff0c;border:1px solid #ffffff25;
+ border-radius:22px;padding:25px;margin:18px auto;
+ max-width:650px;box-shadow:0 10px 35px #0003;
+}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:16px;margin-top:30px;
+}
+.card{
+ padding:24px;background:#ffffff0c;
+ border:1px solid #ffffff25;border-radius:20px;
+}
+.card span{font-size:35px}
+.card h3{margin:12px;color:#ffb4d2}
+.shayari{
+ font-family:'Playfair Display',serif;
+ font-size:21px;line-height:2;color:#ffe1ed;
+}
+.big{font-size:85px;margin:25px}
+footer{text-align:center;padding:25px;color:#c6a9c7}
+.heart{
+ position:fixed;bottom:-30px;pointer-events:none;
+ animation:up 5s linear forwards;z-index:20;
+}
+@keyframes up{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+input{
+ background:#ffffff12;border:1px solid #ffffff35;
+ color:white;padding:12px;border-radius:12px;width:85%;
+ margin:10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<button onclick="showPage('home')">🏠 Home</button>
+<button onclick="showPage('wishes')">🌷 Wishes</button>
+<button onclick="showPage('shayari')">💌 Shayari</button>
+<button onclick="showPage('fun')">🎮 Fun</button>
+<button onclick="showPage('letter')">📝 Letter</button>
+<button onclick="showPage('surprise')">🎁 Surprise</button>
+</nav>
+
+<!-- PAGE 1 -->
+<section id="home" class="page active">
+<div class="tag">✨ A SPECIAL DAY · 16 NOVEMBER ✨</div>
+<div class="big">🎀</div>
+<h1>Happy Birthday<br><span class="gradient">Nishu Cutie!</span></h1>
+<p>
+Today is not just another day.<br>
+It's the birthday of someone who deserves
+all the happiness in the world.
+</p>
+<button class="btn" onclick="showPage('wishes')">
+Start Your Surprise 💗
+</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="wishes" class="page">
+<div class="tag">CHAPTER 02 · SPECIAL WISHES</div>
+<h2>Dear Nishu 🌷</h2>
+<p>Some little wishes for your beautiful new year.</p>
+
+<div class="grid">
+<div class="card"><span>🌸</span><h3>Happiness</h3>
+<p>May your smile never fade and your heart always stay happy.</p></div>
+
+<div class="card"><span>✨</span><h3>Dreams</h3>
+<p>May every dream you have find its way towards reality.</p></div>
+
+<div class="card"><span>🦋</span><h3>Confidence</h3>
+<p>Always believe in yourself. You are capable of amazing things.</p></div>
+
+<div class="card"><span>💗</span><h3>Love & Care</h3>
+<p>May you always have people around who genuinely care for you.</p></div>
+
+<div class="card"><span>🌈</span><h3>New Memories</h3>
+<p>May this year give you countless reasons to laugh.</p></div>
+
+<div class="card"><span>🎂</span><h3>Birthday Magic</h3>
+<p>May today be filled with cake, gifts and beautiful surprises.</p></div>
+</div>
+<button class="btn" onclick="showPage('shayari')">Next Surprise →</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="shayari" class="page">
+<div class="tag">CHAPTER 03 · WORDS FROM THE HEART</div>
+<h2>Thodi si Shayari 💌</h2>
+
+<div class="box">
+<p class="shayari">
+Teri muskaan yunhi har din khilti rahe,<br>
+Khushiyon se teri duniya sajti rahe.<br>
+Har khwaab tera haqeeqat ban jaaye,<br>
+Teri zindagi mein bas khushiyan aayein.
+</p>
+</div>
+
+<div class="box">
+<p class="shayari">
+Na chaand ki khwahish, na taaron ki farmaish,<br>
+Tere birthday par bas itni si guzarish.<br>
+Har din tera khoobsurat ban jaaye,<br>
+Aur har pal tere chehre par muskaan laaye.
+</p>
+</div>
+
+<div class="box">
+<p class="shayari">
+Kuch log hote hain khaas,<br>
+Jo ban jaate hain dil ke paas.<br>
+Teri zindagi mein khushiyan hazaar hon,<br>
+Aur har din tere liye ek naya tyohar ho.
+</p>
+</div>
+
+<button class="btn" onclick="showPage('fun')">Let's Play 🎮</button>
+</section>
+
+<!-- PAGE 4 -->
+<section id="fun" class="page">
+<div class="tag">CHAPTER 04 · FUN TIME</div>
+<h2>Birthday Fun Zone 🎮</h2>
+<p>Choose a button and discover your birthday surprise!</p>
+
+<div class="grid">
+<div class="card">
+<span>🍀</span><h3>Lucky Message</h3>
+<button class="btn" onclick="randomMessage()">Click Me</button>
+<p id="luck"></p>
+</div>
+
+<div class="card">
+<span>🌟</span><h3>Your Superpower</h3>
+<button class="btn" onclick="power()">Discover</button>
+<p id="power"></p>
+</div>
+
+<div class="card">
+<span>🎀</span><h3>Birthday Mission</h3>
+<button class="btn" onclick="mission()">Reveal</button>
+<p id="mission"></p>
+</div>
+</div>
+
+<button class="btn" onclick="showPage('letter')">Next →</button>
+</section>
+
+<!-- PAGE 5 -->
+<section id="letter" class="page">
+<div class="tag">CHAPTER 05 · A LITTLE LETTER</div>
+<h2>Dear Nishu, 💗</h2>
+
+<div class="box" style="text-align:left">
+<p>Hey Nishu!</p>
+<br>
+<p>
+First of all, a very very Happy Birthday to you!
+I hope your day is full of laughter, happiness,
+your favourite people and lots of cake.
+</p>
+<br>
+<p>
+I made this little website because I wanted
+your birthday to feel a little more special.
+It may be a small surprise, but I hope it
+brings a big smile to your face.
+</p>
+<br>
+<p>
+You deserve all the good things in life.
+Keep smiling, keep growing and never stop
+being your wonderful self.
+</p>
+<br>
+<p>
+And honestly, I'm glad I got to know you.
+I hope we make many more beautiful memories.
+</p>
+<br>
+<p style="color:#ffacd0;font-size:20px">
+Stay happy, stay amazing! 💕
+</p>
+<p>— Your friend ❤️</p>
+</div>
+
+<button class="btn" onclick="showPage('surprise')">
+Last Surprise 🎁
+</button>
+</section>
+
+<!-- PAGE 6 -->
+<section id="surprise" class="page">
+<div class="tag">CHAPTER 06 · THE FINAL SURPRISE</div>
+<h2>Something Special For You!</h2>
+<div class="big">🎁</div>
+<p>Ready to open your birthday gift?</p>
+
+<button class="btn" onclick="openGift()">OPEN YOUR GIFT 💗</button>
+
+<div class="box" id="gift" style="display:none">
+<h2>Surprise Nishu! 🎀</h2>
+<p>
+You are special in your own way.<br>
+May your life always be full of smiles,
+beautiful memories and endless happiness.
+</p>
+<br>
+<h2 class="gradient">Happy Birthday Cutie! 💖</h2>
+<p>And remember... keep that beautiful smile!</p>
+</div>
+
+<button class="btn" onclick="hearts()">More Hearts 💕</button>
+<button class="btn" onclick="showPage('home')">Replay Website ↻</button>
+</section>
+
+<footer>
+Made with ❤️ for Nishu · 16 November
+</footer>
+
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function randomMessage(){
+ const m=[
+ "A beautiful year is waiting for you! 🌸",
+ "Your smile is your best superpower! 💗",
+ "May all your wishes come true! ✨",
+ "Today, cake has zero calories! 🎂"
+ ];
+ document.getElementById('luck').innerText=
+ m[Math.floor(Math.random()*m.length)];
+}
+
+function power(){
+ const p=[
+ "Making ordinary days feel special! 🌷",
+ "Spreading happiness everywhere! 💕",
+ "Being wonderfully YOU! 🦋"
+ ];
+ document.getElementById('power').innerText=
+ p[Math.floor(Math.random()*p.length)];
+}
+
+function mission(){
+ const m=[
+ "Eat your favourite cake today! 🍰",
+ "Take a cute birthday selfie! 📸",
+ "Make one big birthday wish! 🌟",
+ "Smile as much as you can today! 💗"
+ ];
+ document.getElementById('mission').innerText=
+ m[Math.floor(Math.random()*m.length)];
+}
+
+function openGift(){
+ document.getElementById('gift').style.display='block';
+ hearts();
+}
+
+function hearts(){
+ const icons=['💗','💕','💖','🌸','✨'];
+ for(let i=0;i<25;i++){
+  let h=document.createElement('div');
+  h.className='heart';
+  h.innerText=icons[Math.floor(Math.random()*icons.length)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(15+Math.random()*20)+'px';
+  h.style.animationDuration=(3+Math.random()*3)+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6500);
+ }
+}
+</script>
+
+</body>
+</html>

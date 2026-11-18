@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,90 +9,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
  background:linear-gradient(135deg,#10091d,#32152f,#160d29);
- color:white;font-family:Poppins,sans-serif;
- min-height:100vh;overflow-x:hidden;
+ color:white;
+ font-family:Poppins,sans-serif;
+ min-height:100vh;
+ overflow-x:hidden;
 }
+
 nav{
  position:sticky;top:0;z-index:10;
  display:flex;justify-content:center;flex-wrap:wrap;
  gap:7px;padding:15px 5px;
- background:#160d20ed;backdrop-filter:blur(12px);
+ background:#160d20ed;
+ backdrop-filter:blur(12px);
 }
+
 nav button{
  background:transparent;color:white;
- border:1px solid #ffffff35;border-radius:25px;
- padding:9px 13px;cursor:pointer;
+ border:1px solid #ffffff35;
+ border-radius:25px;padding:9px 13px;
+ cursor:pointer;
 }
+
 nav button:hover{background:#ff91bd;color:#28132b}
+
 .page{
  display:none;min-height:85vh;
  max-width:950px;margin:auto;padding:65px 20px;
  text-align:center;animation:fade .5s;
 }
+
 .page.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+
+@keyframes fade{
+ from{opacity:0;transform:translateY(15px)}
+ to{opacity:1;transform:none}
+}
+
 h1,h2{font-family:'Playfair Display',serif}
 h1{font-size:clamp(43px,9vw,75px);margin:25px 0}
 h2{font-size:clamp(30px,6vw,46px);color:#ffb4d2;margin-bottom:20px}
 h3{color:#ffb4d2;margin:12px}
 p{line-height:1.9;color:#f3dce9}
+
 .gradient{
  background:linear-gradient(90deg,#ff9ac7,#e3b4ff);
  -webkit-background-clip:text;color:transparent;
 }
+
 .tag{color:#ffacd0;letter-spacing:3px;font-size:12px}
+
 .btn{
  padding:13px 24px;border:0;border-radius:30px;
  background:linear-gradient(90deg,#ff91bd,#c89bff);
  color:#29132b;font-weight:bold;cursor:pointer;
  margin:12px 5px;transition:.3s;
 }
+
 .btn:hover{transform:scale(1.05)}
+
 .box,.card{
  background:#ffffff0c;border:1px solid #ffffff25;
  border-radius:22px;padding:25px;margin:18px auto;
 }
+
 .box{max-width:680px}
+
 .grid{
  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
  gap:15px;margin-top:30px;
 }
+
 .card{margin:0}
 .card span{font-size:35px}
+
 .shayari{
  font-family:'Playfair Display',serif;
  font-size:20px;line-height:2;color:#ffe1ed;
 }
+
 .big{font-size:85px;margin:25px}
 footer{text-align:center;padding:25px;color:#c6a9c7}
+
 .heart{
  position:fixed;bottom:-30px;
  pointer-events:none;animation:up 5s linear forwards;z-index:20;
 }
-@keyframes up{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+
+@keyframes up{
+ to{transform:translateY(-110vh) rotate(40deg);opacity:0}
+}
 
 .countdown{
  max-width:650px;margin:35px auto 20px;padding:25px 12px;
  border:1px solid #ff9fc455;border-radius:25px;
  background:linear-gradient(135deg,#ffffff12,#ff80b510);
 }
-.timer{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}
+
+.timer{
+ display:flex;justify-content:center;gap:10px;
+ flex-wrap:wrap;margin:22px 0;
+}
+
 .unit{
  min-width:72px;padding:14px 8px;
  border-radius:15px;background:#ffffff12;
  border:1px solid #ffffff25;
 }
-.unit strong{display:block;font-size:29px;color:#ffacd0}
+
+.unit strong{
+ display:block;font-size:29px;color:#ffacd0;
+}
+
 .unit small{font-size:11px;color:#e6c8dc}
+
 .locked{
  max-width:650px;margin:20px auto;padding:28px 15px;
  border-radius:24px;border:1px solid #c69aff66;
  background:linear-gradient(135deg,#332044,#21152f);
 }
+
 .lock-icon{font-size:55px}
 #unlockMessage{display:none;margin-top:20px}
+
 @media(max-width:500px){
  nav button{font-size:11px;padding:8px 10px}
  .unit{min-width:65px}
@@ -112,11 +152,16 @@ footer{text-align:center;padding:25px;color:#c6a9c7}
 <button onclick="showPage('surprise')">🎁 Surprise</button>
 </nav>
 
-<!-- PAGE 1 HOME -->
+<!-- HOME -->
 <section id="home" class="page active">
-<div class="tag">✨ 16 NOVEMBER · A SPECIAL DAY ✨</div>
+
+<div class="tag">✨ 26 NOVEMBER · A SPECIAL DAY ✨</div>
+<p class="tag">BIRTHDAY · 26/11/2010</p>
+
 <div class="big">🎀</div>
+
 <h1>Happy Birthday<br><span class="gradient">Cutie!</span></h1>
+
 <p>A little website, a little magic and lots of wishes.<br>
 Made specially to bring a smile to your face. 💗</p>
 
@@ -133,14 +178,20 @@ Made specially to bring a smile to your face. 💗</p>
 <div class="unit"><strong id="minutes">00</strong><small>Minutes</small></div>
 <div class="unit"><strong id="seconds">00</strong><small>Seconds</small></div>
 </div>
-<p>📅 16 November · 12:00 AM</p>
+
+<p>📅 26 November · 12:00 AM</p>
 </div>
 
 <!-- LOCKED SURPRISE -->
 <div class="locked">
+
 <div class="lock-icon" id="lockIcon">🔒</div>
+
 <h3 id="lockTitle">A Secret Surprise Awaits...</h3>
-<p id="lockText">Too curious? 😉 Your little secret is locked until your birthday!</p>
+
+<p id="lockText">
+Too curious? 😉 Your little secret is locked until your birthday!
+</p>
 
 <button class="btn" id="unlockButton" disabled style="opacity:.5">
 🔐 LOCKED UNTIL MIDNIGHT
@@ -153,10 +204,11 @@ Made specially to bring a smile to your face. 💗</p>
 May your life always be full of happiness!</p>
 <div class="big">🎁💗✨</div>
 </div>
+
 </div>
 </section>
 
-<!-- PAGE 2 WISHES -->
+<!-- WISHES -->
 <section id="wishes" class="page">
 <div class="tag">CHAPTER 02 · SPECIAL WISHES</div>
 <h2>Dear Cutie 🌷</h2>
@@ -170,10 +222,11 @@ May your life always be full of happiness!</p>
 <div class="card"><span>🌈</span><h3>Memories</h3><p>May this year give you countless reasons to laugh.</p></div>
 <div class="card"><span>🎂</span><h3>Birthday Magic</h3><p>May today be filled with cake, gifts and beautiful surprises.</p></div>
 </div>
+
 <button class="btn" onclick="showPage('shayari')">Next Surprise →</button>
 </section>
 
-<!-- PAGE 3 SHAYARI -->
+<!-- SHAYARI -->
 <section id="shayari" class="page">
 <div class="tag">CHAPTER 03 · SOME BEAUTIFUL WORDS</div>
 <h2>Thodi Si Shayari 💌</h2>
@@ -208,13 +261,14 @@ Aur har din tere liye ek naya tyohar ho.
 <button class="btn" onclick="showPage('fun')">Let's Play 🎮</button>
 </section>
 
-<!-- PAGE 4 FUN -->
+<!-- FUN -->
 <section id="fun" class="page">
 <div class="tag">CHAPTER 04 · FUN TIME</div>
 <h2>Birthday Fun Zone 🎮</h2>
 <p>Choose a button and discover your birthday surprise!</p>
 
 <div class="grid">
+
 <div class="card">
 <span>🍀</span><h3>Lucky Message</h3>
 <button class="btn" onclick="randomMessage()">Reveal</button>
@@ -232,11 +286,13 @@ Aur har din tere liye ek naya tyohar ho.
 <button class="btn" onclick="mission()">Reveal</button>
 <p id="mission"></p>
 </div>
+
 </div>
+
 <button class="btn" onclick="showPage('letter')">Next →</button>
 </section>
 
-<!-- PAGE 5 LETTER -->
+<!-- LETTER -->
 <section id="letter" class="page">
 <div class="tag">CHAPTER 05 · A LITTLE LETTER</div>
 <h2>Dear Cutie, 💗</h2>
@@ -254,7 +310,7 @@ Aur har din tere liye ek naya tyohar ho.
 <button class="btn" onclick="showPage('surprise')">Last Surprise 🎁</button>
 </section>
 
-<!-- PAGE 6 SURPRISE -->
+<!-- FINAL SURPRISE -->
 <section id="surprise" class="page">
 <div class="tag">CHAPTER 06 · THE FINAL SURPRISE</div>
 <h2>Something Special For You!</h2>
@@ -275,9 +331,10 @@ beautiful memories and endless happiness.</p>
 <button class="btn" onclick="showPage('home')">Replay Website ↻</button>
 </section>
 
-<footer>Made with ❤️ for Cutie · 16 November</footer>
+<footer>Made with ❤️ for Cutie · 26 November</footer>
 
 <script>
+
 function showPage(id){
  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
  document.getElementById(id).classList.add('active');
@@ -320,6 +377,7 @@ function openGift(){
 
 function hearts(){
  const icons=['💗','💕','💖','🌸','✨'];
+
  for(let i=0;i<25;i++){
   let h=document.createElement('div');
   h.className='heart';
@@ -333,12 +391,16 @@ function hearts(){
 }
 
 // COUNTDOWN: INDIA TIME
-const birthdayDate = new Date("2026-11-16T00:00:00+05:30").getTime();
+// Birthday: 26 November 2026, 12:00 AM IST
+
+const birthdayDate = new Date("2026-11-26T00:00:00+05:30").getTime();
 
 function updateCountdown(){
+
  const difference=birthdayDate-Date.now();
 
  if(difference<=0){
+
   ["days","hours","minutes","seconds"].forEach(id=>{
    document.getElementById(id).textContent="00";
   });
@@ -348,6 +410,7 @@ function updateCountdown(){
   document.getElementById("lockText").textContent="The wait is finally over, Cutie! 💗";
 
   const button=document.getElementById("unlockButton");
+
   button.disabled=false;
   button.style.opacity="1";
   button.textContent="🎁 OPEN YOUR SECRET";
@@ -356,6 +419,7 @@ function updateCountdown(){
    document.getElementById("unlockMessage").style.display="block";
    hearts();
   };
+
   return;
  }
 
@@ -370,11 +434,12 @@ function updateCountdown(){
 
  document.getElementById("seconds").textContent=
  Math.floor((difference%60000)/1000).toString().padStart(2,"0");
+
 }
 
 updateCountdown();
 setInterval(updateCountdown,1000);
-</script>
 
+</script>
 </body>
 </html>
